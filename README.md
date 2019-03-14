@@ -23,6 +23,8 @@ Jawaban :
 5. Jalankan programnya
 
         gcc -o soal1 soal1.c
+        
+Maka, file dengan format "[namafile]_grey.png" nya akan berada di direktori /home/[user]/modul2/gambar.
 
 #
 
@@ -30,6 +32,35 @@ Jawaban :
 
 Pada suatu hari Kusuma dicampakkan oleh Elen karena Elen dimenangkan oleh orang lain. Semua kenangan tentang Elen berada pada file bernama “elen.ku” pada direktori “hatiku”. Karena sedih berkepanjangan, tugas kalian sebagai teman Kusuma adalah membantunya untuk menghapus semua kenangan tentang Elen dengan membuat program C yang bisa mendeteksi owner dan group dan menghapus file “elen.ku” setiap 3 detik dengan syarat ketika owner dan grupnya menjadi “www-data”. Ternyata kamu memiliki kendala karena permission pada file “elen.ku”. Jadi, ubahlah permissionnya menjadi 777. Setelah kenangan tentang Elen terhapus, maka Kusuma bisa move on.
 Catatan: Tidak boleh menggunakan crontab
+
+Jawaban :
+1. Buat folder "hatiku"
+ 
+        mkdir hatiku
+    
+2. Di dalam folder "hatiku" buat file "elen.ku"
+
+        touch elen.ku
+
+3. Buat file bernama soal2.c
+
+        nano soal2.c
+
+4. Setelah itu isikan soal2.c dengan script sebagai berikut : [Script Soal 2](/soal2.c)
+
+5. Ubah permission file "elen.ku" menjadi 777
+
+        chmod 777 elen.ku
+        
+6. Ubah owner dan grup pada file "elen.ku" menjadi "www-data"
+
+        sudo chown www-data:www-data elen.ku
+
+7. Jalankan programnya
+
+        gcc -o soal2 soal2.c
+        
+Maka, kenangannya akan terhapus.
 
 #
 
