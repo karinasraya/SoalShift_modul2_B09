@@ -20,6 +20,8 @@ Jawaban :
 
 4. Setelah itu isikan soal1.c dengan script sebagai berikut : [Script Soal 1](/soal1.c)
 
+Keterangan :
+
 5. Jalankan programnya
 
         gcc -o soal1 soal1.c
@@ -47,6 +49,28 @@ Jawaban :
         nano soal2.c
 
 4. Setelah itu isikan soal2.c dengan script sebagai berikut : [Script Soal 2](/soal2.c)
+
+Keterangan :
+
+* Mendapatkan owner dan grup :
+        
+       struct stat hh;
+       char ff[50]="/home/karinasraya/Modul2/soal2/hatiku/elen.ku";
+       stat(ff, &hh);
+       struct passwd *pw = getpwuid(hh.st_uid);
+       struct group  *gr = getgrgid(hh.st_gid);
+       
+* Mengecek apakah owner dan grupnya www-data
+
+      ((strcmp(pw->pw_name,"www-data"))==0) && ((strcmp(gr->gr_name,"www-data"))==0)
+      
+* Menghapus kenangan
+
+       remove(ff)
+       
+* Menghapus file setiap 3 detik
+
+       sleep(3)
 
 5. Ubah permission file "elen.ku" menjadi 777
 
