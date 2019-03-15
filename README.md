@@ -210,7 +210,8 @@ NB: Dilarang menggunakan crontab dan tidak memakai argumen ketika menjalankan pr
 
 Jawaban :
 
-[Script Soal 5](/soal5/soal5.c)
+[Script Soal 5a](/soal5/soal5a.c)
+[Script Soal 5b](/soal5/soal5b.c)
 
 0. buat sebuah proccess daemon dasar.
 
