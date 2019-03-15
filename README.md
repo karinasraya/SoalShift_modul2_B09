@@ -38,7 +38,28 @@ Keterangan :
 
        while ((dir = readdir(gbr)) != NULL)
        
-* 
+* Mencari semua file yang memiliki ekstensi .png lalu di concat dengan string yang mengandung direktori tujuan
+
+       if(name[pjg-4] == '.' && name[pjg-3] == 'p' && name[pjg-2] == 'n' && name[pjg-1] == 'g'){
+            	strcpy(file, "/home/karinasraya/modul2/gambar/");
+		           strcat(file, name);
+       
+* Ambil nama file dan satukan dengan "_grey.png"
+
+        char n[20]="_grey.png";
+        pjg = strlen(file);
+		      file[pjg-4] = '\0';
+		      strcat(file,n);
+
+* Hasilnya di copy ke direktori tujuan
+
+        char *new[]={"cp", name, file, NULL};
+		      execv("/bin/cp", new);
+        
+* Jika semua file .png sudah di ubah namanya dan disimpan di direktori tujuan, maka tutup direktori dan hapus file .png di direktori sebelumnya
+
+        closedir(gbr);
+       	remove("/home/karinasraya/Modul2/soal1/*.png");
 
 5. Jalankan programnya
 
