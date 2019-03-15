@@ -39,35 +39,36 @@ int main() {
   close(STDERR_FILENO);
 
   while(1) {
-    DIR *gbr;
+   DIR *gbr;
     struct dirent *dir;
+
     gbr = opendir(".");
 
     if (gbr)
     {
         while ((dir = readdir(gbr)) != NULL)
         {
-	    char file[500];
-	    int pjg = (int) strlen(dir->d_name);
+	    char file[200];
+	    char n[20]="_grey.png";
+	    int pjg = strlen(dir->d_name);
 	    char *name = dir->d_name;
 	    
-	  if(name[pjg-4] == '.' && name[pjg-3] == 'p' && name[pjg-2] == 'n' && name[pjg-1] == 'g'){
+	if(name[pjg-4] == '.' && name[pjg-3] == 'p' && name[pjg-2] == 'n' && name[pjg-1] == 'g'){
             	strcpy(file, "/home/karinasraya/modul2/gambar/");
-		          strcat(file, name);
-		          pjg = (int)strlen(file);
-		          file[pjg-4] = '\0';
-		          strcat(file, "_grey.png");
-	
-	  if(fork()==0){
-		  char *argv[] = {"cp", name, file, NULL};
-		  execv("/bin/cp", argv);
-		}
-		  printf("%s\n", file);
+		strcat(file, name);
+		pjg = strlen(file);
+		file[pjg-4] = '\0';
+		strcat(file,n);
+	if(fork()==0)
+	{
+		char *new[]={"cp", name, file, NULL};
+		execv("/bin/cp", new);
+	}
 	    }
         }
         closedir(gbr);
+	remove("/home/karinasraya/Modul2/soal1/*.png");
     }
- 	sleep(5);
   }
   
   exit(EXIT_SUCCESS);
