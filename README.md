@@ -22,6 +22,24 @@ Jawaban :
 
 Keterangan :
 
+* Menyimpan direktori yang sedang dicek
+
+       DIR *gbr
+       
+* Menyimpan file yang dicek dalam bentuk struct
+
+       struct dirent *dir
+       
+* Membuka direktori file
+
+       gbr = opendir(".")
+       
+* Mengecek semua file yang ada pada direktori
+
+       while ((dir = readdir(gbr)) != NULL)
+       
+* 
+
 5. Jalankan programnya
 
         gcc -o soal1 soal1.c
