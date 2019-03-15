@@ -62,7 +62,7 @@ int main() {
 		  char *argv[] = {"cp", name, file, NULL};
 		  execv("/bin/cp", argv);
 		}
-		printf("%s\n", file);
+		  printf("%s\n", file);
 	    }
         }
         closedir(gbr);
