@@ -67,6 +67,9 @@ Keterangan :
         
 Maka, file dengan format "[namafile]_grey.png" nya akan berada di direktori /home/[user]/modul2/gambar.
 
+![Gambar Soal 1](/Image/1a.PNG)
+![Gambar Soal 1](/Image/1b.PNG)
+
 #
 
 <b> No. 2 </b>
@@ -124,6 +127,8 @@ Keterangan :
         gcc -o soal2 soal2.c
         
 Maka, kenangannya akan terhapus.
+
+![Gambar Soal 1](/Image/2.PNG)
 
 #
 
