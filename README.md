@@ -65,7 +65,7 @@ Keterangan :
 
         gcc -o soal1 soal1.c
         
-Maka, file dengan format "[namafile]_grey.png" nya akan berada di direktori /home/[user]/modul2/gambar.
+Maka, file dengan format "[namafile]_grey.png" nya akan berada di direktori /home/[user]/modul2/gambar dan file .png di direktori sebelumnya akan terhapus.
 
 ![Gambar Soal 1](/Image/1a.PNG)
 ![Gambar Soal 1](/Image/1b.PNG)
