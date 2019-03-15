@@ -18,7 +18,7 @@ Jawaban :
 
         nano soal1.c
 
-4. Setelah itu isikan soal1.c dengan script sebagai berikut : [Script Soal 1](/soal1.c)
+4. Setelah itu isikan soal1.c dengan script sebagai berikut : [Script Soal 1](/soal1/soal1.c)
 
 Keterangan :
 
@@ -48,7 +48,7 @@ Jawaban :
 
         nano soal2.c
 
-4. Setelah itu isikan soal2.c dengan script sebagai berikut : [Script Soal 2](/soal2.c)
+4. Setelah itu isikan soal2.c dengan script sebagai berikut : [Script Soal 2](/soal2/soal2.c)
 
 Keterangan :
 
